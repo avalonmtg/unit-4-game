@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Crystal Game</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <h1 class="text-center">The Crystal Game</h1>
+
+  <h2 class="text-bold">How To Play!</h2>
+  <p>To begin the game, you will be given a random number. By clicking on any of the four crystals below you will add a
+    specific amount of points to your total score.</p>
+  <p>To win the game you need to match your total score to the random number!</p>
+  <p>You lose the game if your total score goes above the random number. The value of each crystal is hidden from you
+    until you click on it.</p>
+
+  <div class="row ">
+    <div class="col-sm" style="align-items: center" style="max-width: 25%">
+      <button id="crystal1" class="btn-lg btn-outline-primary"><img src="assets\images\bluestone.jfif" height="100"
+          width="150"></button>
+    </div>
+
+    <div class="col-sm" style="align-items: center" style="max-width: 25%">
+      <button id="crystal2" class="btn-lg btn-outline-success"><img src="assets\images\greenstone.jfif" height="100"
+          width="150"></button>
+    </div>
+
+    <div class="col-sm" style="align-items: center" style="max-width: 25%">
+      <button id="crystal3" class="btn-lg btn-outline-danger"><img src="assets\images\redstone.jfif" height="100"
+          width="150"></button>
+    </div>
+
+    <div class="col-sm" style="align-items: center" style="max-width: 25%">
+      <button id="crystal4" class="btn-lg btn-outline-warning"><img src="assets\images\yellowstone.jfif" height="100"
+          width="150"></button>
+    </div>
+  </div>
+
+  <div class="container text-center alert alert-primary">
+    <h4 id="Message">Match this number to win the game!</h4>
+    <h2 id="randomNumber" height="50" width="50"></h2>
+    <h4>Click on a crystal to start the game!</h4>
+    <h2 id="score" height="50" width="50"></h2>
+
+  </div>
+
+  <h4>Wins: </h4>
+  <h3 id=wins></h3>
+
+  <h4>Losses: </h4>
+  <h3 id=losses></h3>
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
