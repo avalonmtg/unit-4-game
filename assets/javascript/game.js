@@ -12,7 +12,7 @@ $(document).ready(function () {
     var crystalValue4 = generateRandomNumber(1, 12);
     var score = 0;
 
-    var crystalRandom = [];
+    var randomCrystal = [];
     var wins = 0;
     var losses = 0;
 
@@ -52,32 +52,31 @@ $(document).ready(function () {
 
     $("button").on("click", function (event) {
         event.preventDefault();
-        var gemValue = $(this).attr("value");
-        score += parseInt(gemValue);
+        var crystalValue = $(this).attr("value");
+        score += parseInt(crystalValue);
         console.log(score);
         $("#score").text("Your Total Score: " + score);
         if (score === numberGoal) {
             wins++;
-            alert("You Won!");
-            $("#wins").text("Wins" + wins);
+            alert("You Won - Hooray!");
+            $("#wins").text("Wins " + wins);
             $("#score").text("Your Total Score: " + score);
             reset();
         }
         else if (score > numberGoal) {
             losses++;
-            alert("You Lost :(")
-            $("#losses").text("Losses" + losses);
+            alert("You Lost - So Sad")
+            $("#losses").text("Losses " + losses);
             reset();
         }
     })
 
     // game reset
     function reset() {
-        alert("Another Game?");
+        alert("Want to Play Again?");
         score = 0;
-        $("#score").text("Your Total Score: " + score);
-        
-
+        $("#score").text("Your Score: " + score);
+        numberGoal = generateRandomNumber(19, 120);
+        $("#randomNumber").text(numberGoal);
     }
-    
 })
